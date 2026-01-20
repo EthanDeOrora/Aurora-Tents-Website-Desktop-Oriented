@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Aurora Tents and Services provides high-quality tents and equipment for all your outdoor needs.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Give Your Feedback</title>
+        <link rel="stylesheet" href="request-quote.css" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Adamina' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Arima' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Aboreto' rel='stylesheet'>
+        <script src="script.js" defer></script>
+        <link href='https://fonts.googleapis.com/css?family=Alan Sans' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Bitcount Grid Single' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Abyssinica SIL' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Cabin Sketch' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Architects Daughter' rel='stylesheet'>
+        <link rel="icon" type="image/x-icon" href="favicon.png" class="iconb">
+  </head>
+  <body>
+        <button id="back-button" class="reveal" onclick="history.back()">← Go Back</button>
+
+        <div class="split-container">
+
+            <!-- LEFT PANEL -->
+              
+            <div class="left-panel">
+            <img src="feedback-form.gif" alt="Aurora Tents Animation" class="hero-gif"/>
+            </div>
+
+            <!-- RIGHT PANEL -->
+            <div class="right-panel">
+            <div class="form-wrapper">
+            <div class="form-card">
+            <form id="quote-form" class="reveal" action="https://formspree.io/f/mkowpnjq" method="POST">
+            <fieldset id="contact-us" class="reveal">
+              <legend class="reveal">Share Your Thoughts and Experience</legend>
+              <label class="reveal">How did you find out about us?</label><br>
+              <select class="reveal" name="How they heard about us">
+                <option class="reveal" value="choose">Choose</option>
+                <option class="reveal" value="Instagram">Instagram</option>
+                <option class="reveal" value="Facebook">Facebook</option>
+                <option class="reveal" value="Youtube">Youtube</option>
+                <option class="reveal" value="Tiktok">Tiktok</option>
+                <option class="reveal" value="Commercial">Commercial</option>
+                <option class="reveal" value="Friends">Friend</option>
+                <option class="reveal" value="Google">Google</option>
+              </select><br><br>
+
+              <label class="reveal">Would you visit us again</label><br>
+              <input class="reveal" type="radio"name="Would they visit us again" value="Yes">Yes<br>
+              <input class="reveal" type="radio"name="Would they visit us again" value="No">No<br>
+              <input class="reveal" type="radio"name="Would they visit us again" value="Maybe">Maybe<br><br>
+
+              <label class="reveal">What did you like about this website?</label><br>
+              <input class="reveal" type="checkbox" name="What they like about the website" value="Organization of content">Organization of content<br>
+              <input class="reveal" type="checkbox" name="What they like about the website" value="Navigation through the website">Navigation through the website<br>
+              <input class="reveal" type="checkbox" name="What they like about the website" value="Information delivery">Information delivery<br>
+              <input class="reveal" type="checkbox" name="What they like about the website" value="Accessible resources">Accessible resources<br>
+              <input class="reveal" type="checkbox" name="What they like about the website" value="All factors in General">All factors in General<br>
+              <label class="reveal">Comment: <br><textarea name="Thoughts on Aurora Tents" rows="4" cols="50" placeholder="Thoughts on Aurora Tents"></textarea></label><br><br>
+              <input class="reveal" type="submit" value="Submit">
+            </fieldset>
+          </form>
+            </div>
+            </div>
+            </div>
+        </div>
+
+        <script>
+                    window.addEventListener("load", () => {
+                    document.body.classList.add("loaded");
+                    });
+                </script>
+
+                <script>
+                    const observer = new IntersectionObserver(entries => {
+                        entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("active");
+                        }
+                        });
+                    });
+
+                    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+                    </script>
+                    <script>
+                    document.querySelectorAll("a").forEach(link => {
+                        link.addEventListener("click", e => {
+                        if (link.href.includes(window.location.origin)) {
+                            e.preventDefault();
+                            document.body.classList.add("fade-out");
+                            setTimeout(() => {
+                            window.location = link.href;
+                            }, 200);
+                        }
+                        });
+                    });
+                </script>
+  </body>
+</html>

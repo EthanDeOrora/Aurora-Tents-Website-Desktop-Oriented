@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Aurora Tents and Services provides high-quality tents and equipment for all your outdoor needs.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Get Your Quote!</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Adamina' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Arima' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Aboreto' rel='stylesheet'>
+        <script src="script.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Alan Sans' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Bitcount Grid Single' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Abyssinica SIL' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Cabin Sketch' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Architects Daughter' rel='stylesheet'>
+        <link rel="icon" type="image/x-icon" href="favicon.png" class="iconb">
+  </head>
+  <body>
+       
+
+        <script>
+            window.addEventListener("load", () => {
+            document.body.classList.add("loaded");
+            });
+        </script>
+
+        <script>
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                }
+                });
+            });
+
+            document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+            </script>
+            <script>
+            document.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", e => {
+                if (link.href.includes(window.location.origin)) {
+                    e.preventDefault();
+                    document.body.classList.add("fade-out");
+                    setTimeout(() => {
+                    window.location = link.href;
+                    }, 200);
+                }
+                });
+            });
+        </script>
+
+        <div id="page-transition">
+            <div class="spinner"></div>
+          </div>
+  </body>
+</html>
