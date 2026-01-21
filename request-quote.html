@@ -20,7 +20,7 @@
         <link rel="icon" type="image/x-icon" href="favicon.png" class="iconb">
   </head>
   <body>
-        <button id="back-button" class="reveal" onclick="history.back()">← Go Back</button>
+       <button id="back-button" class="reveal" onclick="window.history.go(-1)">← Go Back</button>
 
         <div class="split-container">
 
@@ -70,7 +70,7 @@
                         <input class="reveal" type="radio"name="Title" value="Dr.">Dr.
                         <input class="reveal" type="radio"name="Title" value="Prof.">Prof.            
                         <p class="reveal" id="formality"><em>*We respect formality. Please select the title that suits you the most*</em></p>
-                        <label class="reveal">When do you require them?     <input type="date" name="Date required" placeholder="Select a date"><br><br></label>
+                        <label class="reveal">When do you require them?<input type="date" name="Date required" placeholder="Select a date"><br><br></label>
                         <textarea class="reveal" name="Additional details/instructions" rows="5" cols="50" placeholder="Please share any additional details about your event or request (e.g. setup needs or special instructions)."></textarea><br><br>
                         <button type="submit" class="reveal" id="submit-button">Submit</button>
                         </fieldset>
@@ -112,3 +112,4 @@
                 </script>
   </body>
 </html>
+
